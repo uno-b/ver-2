@@ -12,7 +12,7 @@ import './index.scss';
 const IndexPage = () => {
   return (
     <main>
-      <SEO title='Home Page' />
+      <SEO title='Home Page | Battles of Crypto' />
       <Header />
       <Cover />
       <Information />
