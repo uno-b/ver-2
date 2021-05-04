@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Social from '../components/Social';
 import Footer from '../components/Footer';
@@ -7,7 +8,7 @@ import Footer from '../components/Footer';
 const Game = () => {
   return (
     <main>
-      <title>Game</title>
+      <SEO title='Game' />
       <Header />
       <h1
         style={{

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
 
+import SEO from '../components/SEO';
 import user from '../images/user.svg';
 import Header from '../components/Header';
 import Social from '../components/Social';
@@ -31,7 +32,7 @@ const title = {
 const Team = () => {
   return (
     <main>
-      <title>Team</title>
+      <SEO title='Team' />
       <Header />
       <div style={containerStyle}>
         <div style={wrapperStyle}>

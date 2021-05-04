@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Cover from '../components/Cover';
 import Information from '../components/Information';
@@ -11,7 +12,7 @@ import './index.scss';
 const IndexPage = () => {
   return (
     <main>
-      <title>Home Page</title>
+      <SEO title='Home Page' />
       <Header />
       <Cover />
       <Information />
