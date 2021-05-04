@@ -1,0 +1,135 @@
+@import '../../breakpoints.scss';
+
+.container {
+  margin: 5rem 0;
+
+  .wrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image,
+    .column {
+      width: 50%;
+    }
+
+    .column {
+      h2,
+      p {
+        color: white;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-style: italic;
+        line-height: 2;
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+
+    img {
+      margin-left: 2rem;
+      width: 70%;
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    .fade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgb(12, 7, 38),
+        rgb(12, 7, 38, 0.9),
+        rgb(12, 7, 38, 0.8),
+        rgba(12, 7, 38, 0.5),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(12, 7, 38, 0.5),
+        rgb(12, 7, 38, 0.8),
+        rgb(12, 7, 38, 0.9),
+        rgb(12, 7, 38)
+      );
+    }
+  }
+
+  @include media('<=phone') {
+    .wrapper {
+      width: 100%;
+      flex-direction: column;
+
+      .column {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      img {
+        margin-top: 5rem;
+      }
+
+      .fade {
+        display: none;
+      }
+    }
+  }
+
+  @include media('>phone', '<=425px') {
+    .wrapper {
+      width: 100%;
+      flex-direction: column;
+
+      .column {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      img {
+        margin-top: 5rem;
+      }
+
+      .fade {
+        display: none;
+      }
+    }
+  }
+
+  @include media('>425px', '<=tablet') {
+    .wrapper {
+      width: 100%;
+      flex-direction: column;
+
+      .column {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      img {
+        margin-top: 5rem;
+      }
+
+      .fade {
+        display: none;
+      }
+    }
+  }
+
+  @include media('>tablet', '<=desktop') {
+  }
+
+  @include media('>desktop') {
+  }
+}

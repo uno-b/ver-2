@@ -1,0 +1,93 @@
+@import '../../breakpoints.scss';
+
+.container {
+  .cover {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-color: rgb(12, 7, 38);
+  }
+
+  .fade {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      0deg,
+      rgba(12, 7, 38),
+      rgba(12, 7, 38, 0.6),
+      rgba(12, 7, 38, 0.6),
+      rgba(12, 7, 38, 0.6),
+      rgba(12, 7, 38)
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 45vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    z-index: 1;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+      width: 75%;
+      line-height: 2;
+    }
+
+    .subscribe {
+      margin-right: 4rem;
+      background-color: rgb(148, 14, 136);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      margin: auto;
+    }
+  }
+
+  @include media('<=phone') {
+    .column {
+      h1 {
+        font-size: 1.4rem;
+        width: 90%;
+      }
+    }
+  }
+
+  @include media('>phone', '<=425px') {
+    .column {
+      h1 {
+        font-size: 1.8rem;
+        width: 90%;
+      }
+    }
+  }
+
+  @include media('>425px', '<=tablet') {
+    .column {
+      h1 {
+        font-size: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}

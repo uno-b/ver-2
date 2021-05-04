@@ -1,0 +1,111 @@
+@import '../../breakpoints.scss';
+
+.container {
+  margin: 2rem 0;
+  .wrapper {
+    background: linear-gradient(
+        0deg,
+        rgba(12, 7, 38),
+        rgba(12, 7, 38, 0.7),
+        rgba(12, 7, 38, 0.7),
+        rgba(12, 7, 38)
+      ),
+      url('../../images/Rectangle.png');
+    width: 100%;
+    padding: 5rem 0;
+    margin: auto;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5rem;
+      font-size: 3rem;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      margin: auto;
+      width: fit-content;
+      background-color: white;
+      border-radius: 0.5rem;
+
+      input[type='text'] {
+        width: 30vw;
+        border: none;
+        outline: none;
+        margin-left: 0.5rem;
+      }
+
+      input[type='submit'] {
+        border: none;
+        background-color: rgb(148, 14, 136);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    .wrapper {
+      h2 {
+        font-size: 1.5rem;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .form {
+        flex-direction: column;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media('>phone', '<=425px') {
+    .wrapper {
+      h2 {
+        font-size: 1.5rem;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .form {
+        flex-direction: column;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media('>425px', '<=tablet') {
+    .wrapper {
+      h2 {
+        font-size: 1.5rem;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .form {
+        flex-direction: column;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media('>tablet', '<=desktop') {
+  }
+
+  @include media('>desktop') {
+  }
+}
